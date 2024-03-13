@@ -1,0 +1,10 @@
+rootProject.name = 'JsonstorePMFRN'
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+includeBuild('../node_modules/@react-native/gradle-plugin')
+
+include ':react-native-bridge'
+project(':react-native-bridge').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-ibm-mobilefirst/android/react-native-bridge')
+
+include ':react-native-jsonstorebridge'
+project(':react-native-jsonstorebridge').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-ibm-mobilefirst-jsonstore/android/react-native-jsonstorebridge')
